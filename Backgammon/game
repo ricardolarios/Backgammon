@@ -1,0 +1,9 @@
+.PHONY: all clean
+
+all: backgammon
+
+backgammon: Board/Board.cpp Piece/Piece.cpp Space/Space.cpp controller/TextController.cpp Dice/Dice.cpp DoublingCube/DoublingCube.cpp model/BackgammonModel.cpp Piece/Piece.cpp Player/Player.cpp Points/Points.cpp Space/Space.cpp view/TextView.cpp main/main.cpp 
+	g++ -std=c++11 $^ -o $@
+
+clean:
+	rm -f *.o backgammon

@@ -1,0 +1,16 @@
+CXXTEST_HOME = cxxtest-4.4
+CXXTEST_GEN = $(CXXTEST_HOME)/bin/cxxtestgen
+CXXTEST_INCLUDE = $(CXXTEST_HOME)
+
+.PHONY: all clean
+
+all: runner
+
+BackgammonTestSuite.cpp: BackgammonTestSuite.h
+	$(CXXTEST_GEN) --error-printer $< -o $@
+
+runner: BackgammonTestSuite.cpp BackgammonTestSuite.h 
+	g++ -std=c++11 $< -I$(CXXTEST_INCLUDE) -o $@
+
+clean:
+	rm -f runner BackgammonTestSuite.cpp

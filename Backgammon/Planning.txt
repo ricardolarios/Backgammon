@@ -1,0 +1,16 @@
+ROLES:
+D: Dan
+R: Rikki
+L: Leslie
+E: Eric
+
+To do:
+- Graphics (sdl/open gl/etc) E
+- Start Game in Model/move from main to model D
+- Input of commands (move, capture, etc) L, R
+- Output of commands (board, game start, etc) D, L, R
+- Unit Tests ALL
+- 2-3 min video E, D
+- Movement L, R
+
+CONTINUE ADDING TO LIST

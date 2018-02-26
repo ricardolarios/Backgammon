@@ -1,0 +1,82 @@
+BCC Backgammon Game Instructions:
+
+Building the Code (TEXTVIEW VERSION ONLY):
+-	To build the game: 
+	o	Run the Makefile entitled "game"
+		-	To do this, type "make -f game" into the terminal
+			o	To clean, type "make -f game clean" into the terminal
+-	To run the game binary: 
+	o	Type "./backgammon" into the terminal after game finishes building
+-	To build the unit tests:
+	o	Run the Makefile entitled "testing"
+		-	To do this, type "make -f testing"
+			o	To clean, type "make -f testing clean"
+-	To run the unit tests binary:
+	o	Type "./runner" into the terminal after testing finishes building
+	
+Running the Game (WITH VISUALS):
+-	To build the game:
+	o	Open the BackgammonVisual folder, unzip the Backgammon.zip file, and run the Backgammon.exe file
+
+Usable Platforms:
+-	Running the code from the project:
+	o	Visual Studio, Windows 
+
+-	Running the .exe:
+	o	Windows
+
+Interaction / How to Play Backgammon Instructions:
+	o	When you first start the program, it will prompt you for player names and which color 
+		you want to play as.
+	o	After you enter these, the graphics window will pop up, and you will be able to interact 
+		with it through the terminal. You will have to switch windows to the terminal and make sure
+		not to click the visual window.
+	o	The goal of Backgammon is to get all your pieces into your respective final capture slot. 
+		For black, this is the top right, and for white, this is the bottom right. Black can only 
+		move their pieces in a clockwise direction towards the top right, and white can only 
+		move their pieces in a counterclockwise direction towards the bottom right. To move, 
+		you roll two die (with one roll command) and use the amount on both the die to move 
+		your pieces, either separately or combined (if you roll a 3 and a 2 as white, you can 
+		move a piece from 13 to 15 and still have the 3 move, 13 to 16 and still have the 2 
+		move, or 13 to 18 and use both rolls). (This is done through the "move" command)
+	o	After rolling, you can see your possible moves by using the "possible" command followed
+		by the number of the piece whose moves you want to see. 
+	o	You must get all your pieces into the last quadrant of the board (the top right for black, 
+		the bottom right for white) before you can start depositing your pieces into the capture 
+		slot. Whoever can get all their pieces into their final captured slot first wins the game. 
+		(Moving your pieces into the capture slot is done using the "bear" command)
+	o	You cannot move one of your pieces onto any space where your opponent has two or 
+		more pieces. However, if you land on a space where only one of your "opponent's" pieces
+		is, you will capture that piece and put your piece in its place, sending it to the middle 
+		zone of the board and forcing your opponent to use their next rolls to bring it back on 
+		the board. 
+		- 	To do this, they must use a roll that lets them move a piece from their 
+			"opponent's" capture slot (so black would have to start at the bottom left and
+			white at the bottom right) onto the board. If black rolls a 1 and the first space 
+			outside of the white capture spot (spot 24) is open, they can enter that piece 
+			back into the game and use their remaining rolls normally for that turn. 
+			However, if they have no usable rolls, their turn is skipped and they are unable 
+			to move their pieces that are on the board normally until their captured pieces 
+			are returned to the board. (This is done through the "enter" command)
+	o	The doubling cube can first be used by either player to propose a doubling of the points 
+		given at the end of the game. Once it is used, the player who proposed it cannot use it 
+		again until their opponent uses it. The doubling cube can also not be used if the player 
+		has already rolled. If the opponent refuses to accept the proposal, they forfeit the game. 
+	o	The instructions of how to use the game commands are on the game board in the visual 
+		window.
+
+IMPORTANT NOTES FOR VISUAL GAME:
+-	Before entering your color in the terminal, make sure that you resize the terminal 
+	to a suitable size, small enough to be able to see the visuals in the background.
+-	When the visual window loads:
+	o	DO NOT CLICK ON THE VISUAL WINDOW
+	o	DO NOT CLICK ON THE TERMINAL WINDOW
+	o	DO NOT DRAG TERMINAL WINDOW OR VISUAL WINDOW
+	o	DO NOT RESIZE TERMINAL WINDOW OR VISUAL WINDOW
+	o	That being said, you should be able to bring the command prompt in front of the visual window by
+		switching to it as the current window (which is why you should resize it before the visual window pops up)
+
+IMPORTANT NOTES FOR TESTS:
+-	In order to run tests and/or build the tests binary, you must have the cxxtest-4.4 folder inside the main project
+    	folder. This is kind of like what we did for ASGN5. If it is not in the main project folder, the tests will not run.
+-   	The testing only works for the classes that are NOT in the Backgammon zip folder, so make sure that you are doing all 	 	 the testing before unzipping the Backgammon file.

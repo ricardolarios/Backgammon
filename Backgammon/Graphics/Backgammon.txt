@@ -1,0 +1,12 @@
+black_piece.png: For black player
+white_piece.png: For white player
+black_piece_captured.png: Variant of black piece in capture zone	
+white_piece_captured.png: Variant of white piece in capture zone	
+backgammon_board.png: Basic setup of board state with wood backing
+backgammon-background-texture.jpg: Background texture for the gameboard
+doubling_cube_click.png: Button for doubling cube
+roll_dice_click.png: Button for rolling dice
+http://lazyfoo.net/tutorials/SDL/06_extension_libraries_and_loading_other_image_formats/index2.php
+diceSide1 - 6.png: Sides of the dice
+doublingCube1 - 64.png: Doubling cubes
+possible_indicator.png: Highlights possible moves in green
